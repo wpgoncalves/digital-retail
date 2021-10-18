@@ -121,6 +121,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = Path.joinpath(BASE_DIR, 'static')
+
+STATICFILES_DIRS = [
+    ('favicons', Path.joinpath(STATIC_ROOT, 'favicons')),
+    ('img', Path.joinpath(STATIC_ROOT, 'img')),
+]
+#
+# for i in STATICFILES_DIR:
+#     print(f'{i[0]} --> {i[1]}')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

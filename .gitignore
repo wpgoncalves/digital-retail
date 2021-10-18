@@ -1,2 +1,4 @@
 /venv/
 /.idea/
+/templates/temp/
+/showcase/migrations/0001_initial.py

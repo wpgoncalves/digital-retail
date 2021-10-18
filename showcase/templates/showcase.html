@@ -4,16 +4,36 @@
 
 {% block 'body' %}
 <div class="container-fluid">
-    <br>
-    <h1 style="text-align: center;">Página Vitrine Digital</h1>
-    <br>
-    <h5 style="text-align: center;">{{ request.path }}</h5>
-    <br>
-    <p style="text-align: justify;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, illum! Impedit quis officiis itaque ex cumque,
-        sint eos possimus architecto! Aliquam odio laudantium sequi animi, ea fugit reprehenderit iste facere.</p>
-    <p style="text-align: justify;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, illum! Impedit quis officiis itaque ex cumque,
-        sint eos possimus architecto! Aliquam odio laudantium sequi animi, ea fugit reprehenderit iste facere.</p>
-    <p style="text-align: justify;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, illum! Impedit quis officiis itaque ex cumque,
-        sint eos possimus architecto! Aliquam odio laudantium sequi animi, ea fugit reprehenderit iste facere.</p>
+
+	{% if status == '1' %}
+	<div class="alert alert-danger text-center" role="alert">É Necessário Digitar um Endereço de Email Válido!</div>
+	{% endif %}
+
+	{% if status == '2' %}
+	<div class="alert alert-warning text-center" role="alert">Email já Cadastrado!</div>
+	{% endif %}
+
+	{% if status == '3' %}
+	<div class="alert alert-success text-center" role="alert">Email Cadastrado com Sucesso!</div>
+	{% endif %}
+
+	{% if status == '4' %}
+	<div class="alert alert-danger text-center text-uppercase" role="alert">Erro interno ao cadastrar email!</div>
+	{% endif %}
+
+	<br>
+	<h1 style="text-align: center;">Página Vitrine Digital</h1>
+	<br>
+	<h5 style="text-align: center;">{{ request.path }}</h5>
+	<br>
+	<p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta explicabo quam minima!
+		Natus quam repellat sint quae rem, culpa pariatur ipsum ducimus illum, at dignissimos quidem, deserunt dolore
+		aliquam adipisci.</p>
+	<p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta explicabo quam minima!
+		Natus quam repellat sint quae rem, culpa pariatur ipsum ducimus illum, at dignissimos quidem, deserunt dolore
+		aliquam adipisci.</p>
+	<p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta explicabo quam minima!
+		Natus quam repellat sint quae rem, culpa pariatur ipsum ducimus illum, at dignissimos quidem, deserunt dolore
+		aliquam adipisci.</p>
 </div>
 {% endblock %}
