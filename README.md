@@ -32,3 +32,4 @@
 
 - Python 3.9.5
 - Django 3.2.7
+- Pillow 8.4.0

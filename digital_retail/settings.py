@@ -127,9 +127,9 @@ STATICFILES_DIRS = [
     ('favicons', Path.joinpath(STATIC_ROOT, 'favicons')),
     ('img', Path.joinpath(STATIC_ROOT, 'img')),
 ]
-#
-# for i in STATICFILES_DIR:
-#     print(f'{i[0]} --> {i[1]}')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

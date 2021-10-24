@@ -2,3 +2,4 @@
 /.idea/
 /templates/temp/
 /showcase/migrations/0001_initial.py
+/showcase/migrations/0002_products.py

@@ -1,11 +1,14 @@
 from django.shortcuts import render, redirect
-from showcase.models import Newsletter
+from showcase.models import Products, Newsletter
 
 
 # Create your views here.
 def showcase(request):
+    # noinspection PyUnresolvedReferences
+    products = Products.objects.filter(discontinued=False)
     status = request.GET.get('status')
-    return render(request, 'showcase.html', {'status': status})
+
+    return render(request, 'showcase.html', {'status': status, 'products': products})
 
 
 def valida_newsletter(request):
