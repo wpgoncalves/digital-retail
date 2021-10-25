@@ -5,30 +5,37 @@
 {% block 'title' %}Vitrine{% endblock %}
 
 {% block 'body' %}
-<main>
-	<div class="container-fluid" style="background-color: #f4ffbb;">
-		<div class="container py-2">
-			<div class="row row-cols-1 row-cols-sm-5 g-1">
+<main class="main-content">
+	<div class="container-fluid bg-cream">
+		<div class="container-md py-2">
+			<div class="row row-cols-sm-2 g-2">
 
-				{% for i in products %}
 				<!-- Bootstrap Card -->
-				<div class="col">
-					<div class="card h-100 text-center border-dark" style="background-color: #f4ffbb;">
-						
-						<img src="{{ i.image.url }}" class="card-img-top" alt="Image Product Card">
-						
-						<div class="card-body">
-							<h5 class="card-title">{{ i.name }}</h5>
-							<h3 class="card-title">R$ {{ i.value }}</h3>
-							<!-- <p class="card-text" style="text-align: left;">{{ i.description }}</p> -->
-							<a href="#" class="btn btn-primary">Saiba mais</a>
-						</div>
-
+				{% for i in products %}
+				<div class="col-md-3">
+					<div class="d-flex h-100">
 						{% if i.promotion %}
-						<div class="card-footer text-uppercase text-black fw-bold bg-warning border-top border-dark" style="letter-spacing: .7rem;">Promoção</div>
+						<span id="FlagPromotion" class="bg-warning border border-end-0 border-dark">Promoção</span>
+						<div class="card card-product text-center border-dark bg-cream h-100">
+							<img src="{{ i.image.url }}" class="card-img-top card-img-flag" alt="Image Product Card">
+						{% else %}
+						<div class="card text-center border-dark bg-cream h-100">
+							<img src="{{ i.image.url }}" class="card-img-top" alt="Image Product Card">
 						{% endif %}
 
+							<div class="card-body">
+
+								<div class="d-flex flex-column h-100">
+									<div class="flex-grow-1 h-100"><h5 class="card-title ">{{ i.name }}</h5></div>
+									<h3 class="card-title">R$ {{ i.value }}</h3>
+									<a href="#" class="btn btn-primary btn-border">Saiba mais</a>
+								</div>
+
+							</div>
+
+						</div>
 					</div>
+
 				</div>
 				{% endfor %}
 
@@ -37,21 +44,3 @@
 	</div>
 </main>
 {% endblock %}
-
-				<!-- <div class="card mb-3 border-0" style="max-width: 540px; background-color: #7cc876;">
-				<div class="card-header text-uppercase text-black fw-bold bg-warning border-warning">Promoção</div>
-				<div class="row g-0">
-					<div class="col-md-4">
-						<img src="{% static 'img/brand.png' %}" class="img-fluid rounded-start" alt="...">
-					</div>
-					<div class="col-md-8">
-		
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-						</div>
-		
-					</div>
-				</div>
-			</div> -->

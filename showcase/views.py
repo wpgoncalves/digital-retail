@@ -5,7 +5,7 @@ from showcase.models import Products, Newsletter
 # Create your views here.
 def showcase(request):
     # noinspection PyUnresolvedReferences
-    products = Products.objects.filter(discontinued=False)
+    products = Products.objects.filter(discontinued=False).order_by('name')
     status = request.GET.get('status')
 
     return render(request, 'showcase.html', {'status': status, 'products': products})

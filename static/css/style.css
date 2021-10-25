@@ -1,0 +1,44 @@
+.bg-color-navbar {
+	background-image: linear-gradient(to bottom left, #7cc876, #3d623a);
+}
+
+.bg-color-footer {
+	background-image: radial-gradient(#7cc876, #3d623a);
+}
+
+.navbar-brand {
+	font-family: 'Merienda One', Carattere, cursive;
+	color: #fff !important;
+	text-shadow: 3px 3px 4px #000;
+}
+
+.bg-cream{
+		background-color: #f4ffbb;
+}
+
+.card-product, .card-img-flag {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.btn-border {
+	border-radius: 2rem;
+}
+
+.main-content {
+	padding-top: 4rem;
+}
+
+#FlagPromotion {
+	border-top-left-radius: .25rem;
+	border-bottom-left-radius: .25rem;
+	text-align: center;
+	padding-right: .15rem;
+	padding-left: .15rem;
+	color: black;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-orientation: upright;
+	letter-spacing: .7rem;
+	writing-mode: vertical-rl;
+}

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_cleanup.apps.CleanupConfig',
     'showcase',
     'about',
 ]
@@ -126,6 +127,7 @@ STATIC_ROOT = Path.joinpath(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     ('favicons', Path.joinpath(STATIC_ROOT, 'favicons')),
     ('img', Path.joinpath(STATIC_ROOT, 'img')),
+    ('css', Path.joinpath(STATIC_ROOT, 'css')),
 ]
 
 MEDIA_URL = '/media/'
