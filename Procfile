@@ -1,0 +1,1 @@
+web: gunicorn digital_retail.wsgi --preload --log-file -
