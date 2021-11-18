@@ -3,3 +3,5 @@
 /.idea/
 /.git/
 /media/
+/db.sqlite3
+/showcase/migrations/0001_initial.py

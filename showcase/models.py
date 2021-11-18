@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 class Products(models.Model):
     name = models.CharField(max_length=60, null=False, blank=False)
-    description = models.TextField(max_length=255)
+    description = models.TextField(max_length=255, blank=True)
     image = models.ImageField(upload_to='products_images/', blank=False)
     value = models.DecimalField(max_digits=8, decimal_places=2)
     promotion = models.BooleanField(default=False)

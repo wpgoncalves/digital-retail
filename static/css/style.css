@@ -16,6 +16,10 @@
 		background-color: #f4ffbb;
 }
 
+.bg-light-gray{
+		background-color: #d6d4d4;
+}
+
 .card-product, .card-img-flag {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
