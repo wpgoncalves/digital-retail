@@ -33,6 +33,14 @@
 	padding-top: 4rem;
 }
 
+.flex-flow-c{
+    flex-flow: column;
+}
+
+.flex-basis-a{
+    flex-basis: auto;
+}
+
 #FlagPromotion {
 	border-top-left-radius: .25rem;
 	border-bottom-left-radius: .25rem;

@@ -5,44 +5,36 @@
 {% block 'title' %}Vitrine{% endblock %}
 
 {% block 'body' %}
-<main class="main-content">
-	<div class="container-fluid bg-cream">
-		<div class="container-md py-2">
-			<div class="row row-cols-sm-2 g-2">
-
-				<!-- Bootstrap Card -->
-				{% for product in products %}
-				<div class="col-md-3">
-					<div class="d-flex h-100">
-						{% if product.promotion %}
-						<span id="FlagPromotion" class="bg-warning border border-end-0 border-dark">Promoção</span>
-						<div class="card card-product text-center border-dark h-100">
-							<img src="{{ product.image.url }}" class="card-img-top card-img-flag" alt="Image Product Card">
-						{% else %}
-						<div class="card text-center border-dark h-100">
-							<img src="{{ product.image.url }}" class="card-img-top" alt="Image Product Card">
-						{% endif %}
-							<div class="card-body">
-								<div class="d-flex flex-column h-100">
-									<div class="flex-grow-1 h-100"><h5 class="card-title ">{{ product.name }}</h5></div>
-									<h3 class="card-title">R$ {{ product.value }}</h3>
-									<button type="button" class="btn btn-primary btn-border" data-bs-toggle="modal"
-													data-bs-target="#learnMoreModal"
-													data-bs-whatever-name="{{ product.name }}"
-													data-bs-whatever-img="{{ product.image.url }}"
-													data-bs-whatever-description="{{ product.description }}">Saiba mais</button>
-								</div>
-							</div>
-						</div>
-					  </div>
+<div class="row row-cols-sm-2 g-2">
+	<!-- Bootstrap Card -->
+	{% for product in products %}
+	<div class="col-md-3">
+		<div class="d-flex h-100">
+			{% if product.promotion %}
+			<span id="FlagPromotion" class="bg-warning border border-end-0 border-dark">Promoção</span>
+			<div class="card card-product text-center border-dark h-100">
+				<img src="{{ product.image.url }}" class="card-img-top card-img-flag" alt="Image Product Card">
+			{% else %}
+			<div class="card text-center border-dark h-100">
+				<img src="{{ product.image.url }}" class="card-img-top" alt="Image Product Card">
+			{% endif %}
+				<div class="card-body">
+					<div class="d-flex flex-column h-100">
+						<div class="flex-grow-1 h-100"><h5 class="card-title ">{{ product.name }}</h5></div>
+						<h3 class="card-title">R$ {{ product.value }}</h3>
+						<button type="button" class="btn btn-primary btn-border" data-bs-toggle="modal"
+										data-bs-target="#learnMoreModal"
+										data-bs-whatever-name="{{ product.name }}"
+										data-bs-whatever-img="{{ product.image.url }}"
+										data-bs-whatever-description="{{ product.description }}">Saiba mais
+						</button>
+					</div>
 				</div>
-				{% endfor %}
-
-			  </div>
-		  </div>
-	  </div>
-  </div>
-</main>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
 
 <!-- Modal Dialog Learn More -->
 <div class="modal fade" id="learnMoreModal" tabindex="-1">
